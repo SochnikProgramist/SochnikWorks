@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кнопка Like</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .container {
+            display: inline-block;
+            text-align: center;
+        }
+        img {
+            width: 300px;
+            height: auto;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .like-count {
+            font-size: 18px;
+            margin-top: 10px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <img src="file:///C:/Users/User/Downloads/photo_2025-04-22_05-10-20.jpg" alt="Изображение">
+    <button onclick="like()">Like</button>
+    <div class="like-count">
+        Лайков: <span id="like-count">0</span>
+    </div>
+</div>
+
+<script>
+    let likeCount = 0;
+    
+    function like() {
+        likeCount++;
+        document.getElementById("like-count").innerText = likeCount;
+    }
+</script>
+
+</body>
+</html>
